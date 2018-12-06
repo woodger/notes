@@ -9,6 +9,7 @@
 - [Node.js](public/nodejs.md)
 - [CSS](public/css.md)
 - [Elasticsearch](public/elasticsearch.md)
+- [Протокол MQTT](public/mqtt.md)
 - [SQL](public/sql.md)
 - [No SQL](public/no-sql.md)
 - [Функциональное программирование](public/functional-programming.md)
