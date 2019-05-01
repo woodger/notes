@@ -181,3 +181,109 @@ function helloWorld(name) {
 
 5
 8
+
+
+
+// function firstDuplicate(a) {
+//   const buf = [];
+//
+//   for (let i of a) {
+//     if (buf.indexOf(i) > -1) {
+//       return i;
+//     }
+//
+//     buf.push(Number(i));
+//   }
+//
+//   return -1;
+// }
+//
+// const res = firstDuplicate([2, 1, 3, 5, 3, 2]);
+//
+// debugger;
+
+//
+// function groupingDishes(dishes) {
+//   const hash = {};
+//
+//   for (let dishe of dishes) {
+//     const [name] = dishe;
+//
+//     for (let i = dishe.length - 1; i > 0; i--) {
+//       const comp = dishe[i];
+//
+//       if (hash[comp] === undefined) {
+//         hash[comp] = [];
+//       }
+//
+//       hash[comp].push(name);
+//     }
+//   }
+//
+//   const food = [];
+//   const keys = Object.keys(hash);
+//
+//   keys.sort();
+//
+//   for (let i of keys) {
+//     const comp = hash[i];
+//
+//     if (comp.length > 1) {
+//       food.push([i, ...comp]);
+//     }
+//   }
+//
+//   return food;
+// }
+//
+// const dishes = [["Salad", "Tomato", "Cucumber", "Salad", "Sauce"],
+//             ["Pizza", "Tomato", "Sausage", "Sauce", "Dough"],
+//             ["Quesadilla", "Chicken", "Cheese", "Sauce"],
+//             ["Sandwich", "Salad", "Bread", "Tomato", "Cheese"]];
+//
+// const res = groupingDishes(dishes);
+// debugger;
+
+
+function repeatedDNASequences(s) {
+  const dna = [];
+
+  for (let i of s) {
+    if (dna.length === 0) {
+      dna.push([i, 0]);
+    }
+
+    let cursor = dna[dna.length - 1];
+
+    if (cursor[0] === i) {
+      cursor[1]++;
+    }
+    else {
+      dna.push([i, 1]);
+    }
+  }
+
+  const sequence = [];
+
+  for (let i = 0; i > dna.length - 1; i++) {
+    const pair = [];
+    const left = dna[i];
+    const right = dna[i + 1];
+
+    sequence.push(left, right);
+
+    // if (left[1] + right[1] > 10) {
+    //   sequence.push(left, right);
+    // }
+  }
+
+  debugger;
+
+  // const res = [];
+  //
+  // for (let i of dna) {
+  //
+  // }
+}
+
+const res = repeatedDNASequences('AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT');
