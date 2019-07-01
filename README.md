@@ -22,3 +22,5 @@
 - [SyncFiddle](http://syncfiddle.net) - онлайн-сервис для `Html`.
 
 - [Collabedit](http://collabedit.com) - онлайн-сервис для `JavaScript`.
+
+- [StackBlitz](https://stackblitz.com) - онлайн-сервис для `React`.
